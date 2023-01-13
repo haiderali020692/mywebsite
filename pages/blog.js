@@ -17,7 +17,7 @@ const open = (text) => {
 
 return <> <Page className="flex items-center">
             <Page.Header style={{ color: palette.successLight }}>
-              <Text h1>Welcome to Haider's Blog</Text>
+              <Text className='text-3xl' h1>Welcome to Haider's Blog</Text>
               <Button auto onClick={() => open('top')} scale={1/2} mr="10px">Open Menu</Button>
             </Page.Header>
             <Page.Content>

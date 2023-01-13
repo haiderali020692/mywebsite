@@ -15,7 +15,7 @@ const open = (text) => {
 
 return <> <Page className='flex flex-col text-center'>
             <Page.Header style={{ color: palette.successLight }}>
-              <Text h1>Welcome to Haider's Portfolio</Text>
+              <Text className='text-3xl' h1>Welcome to Haider's Portfolio</Text>
               <Button auto onClick={() => open('top')} scale={1/2} mr="10px">Open Menu</Button>
             </Page.Header>
             <Page.Content>
