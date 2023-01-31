@@ -43,7 +43,7 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
         placeholder="Name"/>
     </div>
     <div class="form-group mb-6">
@@ -60,7 +60,7 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
         placeholder="Email address"/>
     </div>
     <div class="form-group mb-6">
