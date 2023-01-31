@@ -120,7 +120,7 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
           <Link href={"/"}><Button>Homepage</Button></Link>
           <Link href={"/about"}><Button>About</Button></Link>
           <Link href={"/blog"}><Button>Blog</Button></Link>
-          <Button>Search</Button>
+          <Link href={"/contact"}><Button>Contact</Button></Link>
         </Drawer.Content>
       </Drawer>
         </>
