@@ -118,7 +118,7 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
         <Drawer.Subtitle>Click Anywhere outside it to close it</Drawer.Subtitle>
         <Drawer.Content style={{ display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
           <Link href={"/"}><Button>Homepage</Button></Link>
-          <Link href={"/about"}><Button>About</Button></Link>
+          <Link href={"/portfolio"}><Button>Portfolio</Button></Link>
           <Link href={"/blog"}><Button>Blog</Button></Link>
           <Link href={"/contact"}><Button>Contact</Button></Link>
         </Drawer.Content>
