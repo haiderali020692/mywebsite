@@ -29,3 +29,51 @@ a {
     background: black;
   }
 }*/
+
+
+/* styles/globals.css */
+@font-face {
+  font-family: 'Outrun';
+  src: url('/fonts/future/Outrun future Bold Italic.otf') format('opentype'),
+       url('/fonts/future/Outrun future.otf') format('opentype'),
+       url('/fonts/future/Outrun future Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-4xl {
+  font-family: 'Outrun', sans-serif;
+}
+
+.text-3xl {
+  font-family: 'Outrun', sans-serif;
+  margin: 50px;
+}
+
+.text-5xl {
+  font-family: 'Outrun', sans-serif;
+}
+
+@font-face {
+  font-family: 'Zeroes';
+  src: url('/fonts/zeroes/Zeroes One.otf') format('opentype'),
+       url('/fonts/zeroes/Zeroes Two.otf') format('opentype'),
+       url('/fonts/zeroes/Zeroes Three.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: 'Zeroes', sans-serif;
+}
+
+
+@layer utilities {
+  .gradient-text {
+    background-image: linear-gradient(to top, #ffe838, #fd57bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
