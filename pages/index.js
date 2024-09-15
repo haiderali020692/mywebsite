@@ -23,12 +23,12 @@ return <> <Page className='flex flex-col text-center'>
             <div className="flex flex-row space-x-6">
             <Image width="500px" height="600px" src='/IMG_2399.jpg' />
        
-            <Text style={{ color: "#c70554" }} class="text-center" className="space-x-6 m-8">He is about to create a mythos that will span centuries not just for Everyone</Text>
+            <Text style={{ color: "#c70554" }} class="text-center" className="space-x-6 m-8 para">He is about to create a mythos that will span centuries not just for Everyone</Text>
             </div>
         
 
             </Page.Content>
-            <Page.Footer style={{ marginTop: '5rem', padding: '1rem', backgroundColor: '#310a3f', color: '#fff' }}>
+            <Page.Footer className="footer" style={{ marginTop: '5rem', padding: '1rem', backgroundColor: '#310a3f', color: '#fff' }}>
           <div className="flex flex-col items-center">
             <Text className='text-lg' style={{ marginBottom: '0.5rem' }}>
               © 2024 Haider's Portfolio | All rights reserved.
@@ -39,6 +39,8 @@ return <> <Page className='flex flex-col text-center'>
             </div>
           </div>
         </Page.Footer>
+        
+  
             </Page>
             <Drawer visible={state} onClose={() => setState(false)} placement={placement}>
         <Drawer.Title>Menu</Drawer.Title>
