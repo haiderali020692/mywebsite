@@ -46,10 +46,12 @@ return <> <Page className='flex flex-col text-center'>
         <Drawer.Title>Menu</Drawer.Title>
         <Drawer.Subtitle>Click Anywhere outside it to close it</Drawer.Subtitle>
         <Drawer.Content style={{ display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+          <div className="Menu">
           <Link href={"/"}><Button>Homepage</Button></Link>
           <Link href={"/portfolio"}><Button>Portfolio</Button></Link>
           <Link href={"/blog"}><Button>Blog</Button></Link>
           <Link href={"/contact"}><Button>Contact</Button></Link>
+          </div>
         </Drawer.Content>
       </Drawer>
         </>

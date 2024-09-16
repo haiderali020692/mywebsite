@@ -50,7 +50,7 @@ a {
   margin: 50px;
 }
 
-.text-5xl {
+.port-text {
   font-family: 'Outrun', sans-serif;
 }
 
@@ -72,9 +72,27 @@ p {
     font-size: 2rem; 
   } 
 
+  .text-5xl {
+    margin: 0.5rem;
+    padding: 0.5rem; 
+  }
+
+  .port-text {
+    margin-right: 50px;
+  }
+
+
+  .Menu {
+    display: flex;
+    flex-direction: column; 
+    align-content: center;
+    justify-content: center;
+  }
+
   .flex-row {
     flex-direction: column; 
     align-content: center;
+    justify-content: center;
     
   }
 
@@ -104,7 +122,7 @@ p {
 
   .footer {
     font-size: 0.8rem; /* Make the footer text smaller */
-    margin-right: 500px;
+    margin-right: 50px;
   }
 
   p {
