@@ -43,7 +43,7 @@ return <> <Page className='flex flex-col text-center'>
                 </Card>
             </div>
             </Page.Content>
-            <div className="sm:mr-18" style={{ marginTop: '5rem', padding: '1rem', backgroundColor: '#310a3f', color: '#fff' }}>
+            <div className="footer" style={{ marginTop: '5rem', padding: '1rem', backgroundColor: '#310a3f', color: '#fff' }}>
           <div className="flex flex-col items-center">
             <Text className='text-lg' style={{ marginBottom: '0.5rem' }}>
               © 2024 Haider's Portfolio | All rights reserved.
