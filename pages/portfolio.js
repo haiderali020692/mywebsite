@@ -58,7 +58,7 @@ return <> <Page className='flex flex-col text-center'>
             <Drawer visible={state} onClose={() => setState(false)} placement={placement}>
         <Drawer.Title>Menu</Drawer.Title>
         <Drawer.Subtitle>Click Anywhere outside it to close it</Drawer.Subtitle>
-        <Drawer.Content style={{ display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+        <Drawer.Content style={{ display: "flex", flexDirection: "row", justifyContent: 'center', gap: "5px"}}>
         <div className="Menu">
           <Link href={"/"}><Button>Homepage</Button></Link>
           <Link href={"/portfolio"}><Button>Portfolio</Button></Link>

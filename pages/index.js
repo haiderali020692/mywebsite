@@ -46,7 +46,7 @@ return <> <Page className='flex flex-col text-center'>
         <Drawer.Title>Menu</Drawer.Title>
         <Drawer.Subtitle>Click Anywhere outside it to close it</Drawer.Subtitle>
         <Drawer.Content style={{ display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
-          <div className="Menu">
+          <div className="Menu" style={{margin: "2px", justifyContent: "space-around"}}>
           <Link href={"/"}><Button>Homepage</Button></Link>
           <Link href={"/portfolio"}><Button>Portfolio</Button></Link>
           <Link href={"/blog"}><Button>Blog</Button></Link>
