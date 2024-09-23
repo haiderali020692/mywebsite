@@ -27,7 +27,8 @@
     "next": "13.0.2",
     "next-mdx-remote": "^4.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sib-api-v3-sdk": "^8.5.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

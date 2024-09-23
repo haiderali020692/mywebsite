@@ -1,25 +1,46 @@
 import React from 'react';
 import Link from 'next/link'
 import { Page, useTheme, Button, Drawer, Text} from '@geist-ui/core'
-import { useForm } from "@formcarry/react";
+import { useState } from 'react';
 
 
 function Contact() {
 
-const { state, submit } = useForm({
-  id: 'rAxlZ2HTGH'
-});
-const { palette } = useTheme()
-const [ theState, setState ] = React.useState(false)
-const [ placement, setPlacement ] = React.useState('')
-const open = (text) => {
-  setPlacement(text)
-  setState(true)
-}
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
 
-if (state.submitted) {
-  return <p>Thank you for submitting this form</p>
-}
+  const { palette } = useTheme()
+  const {theState, setState } = useState(false)
+  const {placement, setPlacement} = useState('')
+  const open = (text) => {
+    setPlacement(text)
+    setState(true)
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://formkeep.com/f/8bab38e0b28e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (response.ok) {
+        setStatus('Thank you for your message!');
+      } else {
+        setStatus('Failed to send message.');
+      }
+    } catch (error) {
+      setStatus('Failed to send message.');
+    }
+  };
 
 return <> <Page className='flex flex-col justify-center items-center gap-2'>
             <Page.Header style={{ color: palette.successLight }}>
@@ -27,8 +48,8 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
               <Button auto onClick={() => open('top')} scale={1/2} mr="10px" style={{marginTop: "5px"}}>Open Menu</Button>
             </Page.Header>
             <Page.Content>
-            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-6xl">
-  <form onSubmit={submit}>
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-7xl">
+  <form onSubmit={handleSubmit}>
     <div className="form-group mb-6">
       <input id="name" type="text" name='name' class="form-control block
         w-full
@@ -44,7 +65,10 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-        placeholder="Name"/>
+        placeholder="Name"
+        value={formData.name} 
+        onChange={handleChange} 
+        required/>
     </div>
     <div class="form-group mb-6">
       <input id="email" type="email" name="email" class="form-control block
@@ -61,7 +85,10 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-        placeholder="Email address"/>
+        placeholder="Email address" 
+        value={formData.email} 
+        onChange={handleChange} 
+        required/>
     </div>
     <div class="form-group mb-6">
       <textarea
@@ -86,6 +113,9 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
       name="message"
       rows="3"
       placeholder="Message"
+      value={formData.message} 
+      onChange={handleChange} 
+      required
     ></textarea>
     </div>
     <button type="submit" class="
@@ -106,6 +136,7 @@ return <> <Page className='flex flex-col justify-center items-center gap-2'>
       transition
       duration-150
       ease-in-out">Send</button>
+      <p>{status}</p>
   </form>
 </div>
             </Page.Content>
