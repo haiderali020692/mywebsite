@@ -10,8 +10,8 @@ function Contact() {
   const [status, setStatus] = useState('');
 
   const { palette } = useTheme()
-  const {theState, setState } = useState(false)
-  const {placement, setPlacement} = useState('')
+  const [ theState, setState ] = useState(false)
+  const [ placement, setPlacement ] = useState('')
   const open = (text) => {
     setPlacement(text)
     setState(true)
